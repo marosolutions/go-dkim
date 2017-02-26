@@ -140,7 +140,7 @@ func Sign(email *[]byte, options SigOptions) error {
 	// Header must contain "from"
 	hasFrom := false
 	for i, h := range options.Headers {
-		h = strings.ToLower(h)
+		// h = strings.ToLower(h)
 		options.Headers[i] = h
 		if h == "from" {
 			hasFrom = true
